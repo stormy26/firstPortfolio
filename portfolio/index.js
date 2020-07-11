@@ -61,7 +61,7 @@ function checkForGrass() {
 
         if (!$("#nielsen").hasClass("bounce-down-high")) {
             // Check for Grass
-            if ( (grassPosLeft + 300 >= 0 && grassPosRight - 300 <= 0)  && !jumping && !fallingHigh && !fallingLow) {
+            if ( (grassPosLeft + 250 >= 0 && grassPosRight - 180 <= 0)  && !jumping && !fallingHigh && !fallingLow) {
                 jumping = true;
                 $("#nielsen").addClass("bounce-up");
                 console.log("adding bounce");

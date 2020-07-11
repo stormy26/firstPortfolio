@@ -1188,3 +1188,12 @@ body {
 .bird26-surprise{
   transform: translate(118vh, -44vh);
 }
+
+#sign{
+  width: 30%;
+  height: 25vh;
+  background: url("./assets/sign.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(15vh, -461vh);
+}
