@@ -1,0 +1,1190 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 10000em;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+/* Slides / Backgrounds */
+.slide {
+  /* width: 100vw; */
+  height: 100vh;
+  flex: 0 3000em;
+}
+  
+.two {
+  background: url("./assets/mountains.png");
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  /* width: 1000vw; */
+}
+
+.three {
+  background: url("./assets/mist.png");
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  /* width: 1200em; */
+  width: 2500em;
+}
+
+
+.four {
+  background: url("./assets/pyramids.png");
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  /* width: 1200em; */
+}
+
+
+.five {
+  background: url("./assets/bkg2.png");
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  /* width: 1000vw; */
+}
+
+/* Outer wrapper for horizontal scroll */
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+/* Nielsen character */
+#nielsen{
+  transform: rotate(90deg) translateX(-10vh);
+  transform-origin: top left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  left: 40vh;
+  width: 45%;
+  height: 30vh;
+  margin-top: -75%;
+  background: url("./assets/Nielsen/Walk\ \(1\).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Jumping animation */
+@keyframes bounce-up{
+  0% {transform: rotate(90deg) translateX(-10vh);}
+  100%{ transform: rotate(90deg) translate(-10vh, -15vh);}
+}
+
+#nielsen.bounce-up{
+  animation: bounce-up 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce-down-high{
+  0% {transform: rotate(90deg) translate(-10vh, -15vh);}
+  100%{ transform: rotate(90deg) translate(-10vh, -10vh);} 
+}
+
+#nielsen.bounce-down-high{
+  animation: bounce-down-high 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce-down-low{
+  0% {transform: rotate(90deg) translate(-10vh, -10vh);}
+  100%{ transform: rotate(90deg) translateX(-10vh);}
+}
+
+#nielsen.bounce-down-low{
+  animation: bounce-down-low 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes namemove{
+  0% {transform: rotate(90deg) translate(50vh, 10vh);}
+  100% {transform: rotate(90deg) translate(-40vh, 10vh);}
+}
+/* Name at start */
+.my-name{
+  /* top: 10vw;
+  left: 10vh; */
+  width: 40%;
+  height: 30vh;
+  /* position: fixed; */
+  /* margin-top: -120%; */
+  /* animation-timing-function: ease;
+  animation: namemove 5s; */
+  background: url("./assets/Name.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(60vh, -10vh);
+  /* transform: rotate(90deg) translate(-487vh, 2vh); */
+}
+
+/* All grass */
+.grass{
+  /* top: 50vw;
+  left: -25vh; */
+  width: 100vh;
+  height: 12vh;
+  /* position: relative; */
+  background: url("./assets/Platforms/Walking\ Platforms\ 3.png") no-repeat;
+  background-size: contain;
+  /* transform: rotate(90deg) translate(10vh, 55vh); */
+}
+
+#grass1{
+  background: url("./assets/Platforms/Walking\ Platforms\ 3.png");
+  transform: translate(630vh, 15vh);
+}
+
+#grass2{
+  background: url("./assets/Platforms/Walking\ Platforms\ 3.png");
+  transform: translate(950vh, -416vh);
+}
+
+
+#grass3{
+  background: url("./assets/Platforms/Walking\ Platforms\ 9.png");
+  transform: translate(660vh, -124.5vh)
+}
+
+#grass4{
+  background: url("./assets/Platforms/Walking\ Platforms\ 9.png");
+  transform: translate(980vh, -236.5vh);
+}
+
+#grass5{
+  background: url("./assets/Platforms/Walking\ Platforms\ 9.png");
+  transform: translate(1300vh, -349vh);
+}
+
+
+
+/* All banners */
+
+.banner{
+  width: 35%;
+  height: 30vh;
+}
+#banner1{
+  /* top: 50vw;
+  left: 98vh; */
+  background: url("./assets/banner1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(73vh, -7vh);
+  /* transform: rotate(90deg) translate(-406vh, -40vh); */
+}
+
+#banner2{
+  background: url("./assets/banner2.png");
+  transform: translate(500vh, -161vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner3{
+  background: url("./assets/banner3.png");
+  transform: translate(800vh, -398vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner4{
+  background: url("./assets/languagesbanner.png");
+  transform: translate(540vh, -105vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner5{
+  background: url("./assets/webbanner.png");
+  transform: translate(860vh, -220vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner6{
+  background: url("./assets/project1banner.png");
+  transform: translate(710vh, -108vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner7{
+  background: url("./assets/project2banner.png");
+  transform: translate(1000vh, -248vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner8{
+  background: url("./assets/otherbanner.png");
+  transform: translate(1430vh, -458vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#banner9{
+  background: url("./assets/adobebanner.png");
+  transform: translate(1170vh, -332vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* All levels */
+.level{
+  width: 1000px;
+  height: 55vh;
+}
+
+#level1{
+  background: url("./assets/Level1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(280vh,-40vh);
+}
+
+#level2{
+  background: url("./assets/Level2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(280vh,12vh);
+}
+
+#level3{
+  background: url("./assets/Level3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(330vh,12vh);
+}
+
+#level4{
+  background: url("./assets/Level4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(230vh,12vh);
+}
+
+#finish{
+  background: url("./assets/finish.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1030vh,-423vh);
+}
+
+
+/* All message intros */
+.message{
+  width: 40%;
+  height: 25vh;
+}
+
+#message1{
+  background: url("./assets/About.png");
+  transform: translate(350vh, -115vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#message2{
+  background: url("./assets/Skills.png");
+  transform: translate(360vh, -60vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#message3{
+  background: url("./assets/Experience.png");
+  transform: translate(410vh, -60vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#message4{
+  background: url("./assets/Award.png");
+  transform:translate(310vh, -60vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Statistics in slide 1 */
+.stats1 {
+  width: 90%;
+  height: 70vh;
+  background: url("./assets/multidisciplinary.png");
+  transform: translate(450vh, -165vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pinktrees1{
+  opacity: 0;
+  width: 40%;
+  height: 46vh;
+  background: url("./assets/pinktree.png");
+  transform: translate(478vh, -180vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition:opacity 1s, transform 3s;
+}
+
+.pinktrees1-surprise{
+  opacity: 1;
+  transform: translate(478vh, -211vh);
+}
+
+
+.pinktrees2{
+  opacity: 0;
+  width: 38%;
+  height: 35vh;
+  background: url("./assets/pinktree.png");
+  transform: translate(510vh, -210vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 1s, transform 3s;
+}
+
+.pinktrees2-surprise{
+  opacity: 1;
+  transform: translate(510vh, -246vh);
+}
+
+
+.pinktrees3{
+  opacity: 0;
+  width: 20%;
+  height: 23vh;
+  background: url("./assets/pinktree.png");
+  transform: translate(543vh, -253vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 1s, transform 3s;
+}
+
+.pinktrees3-surprise{
+  opacity: 1;
+  transform: translate(543vh, -269vh);
+}
+
+
+.pinktrees4{
+  opacity: 0;
+  width: 30%;
+  height: 35vh;
+  background: url("./assets/pinktree.png");
+  transform: translate(570vh, -280vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 1s, transform 3s;
+}
+
+.pinktrees4-surprise{
+  opacity: 1;
+  transform: translate(570vh, -304vh);
+}
+
+.buildings{
+  opacity: 0;
+  width: 55%;
+  height: 70vh;
+  background: url("./assets/Buildings.png");
+  transform: translate(750vh, -500vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 1s, transform 1s;
+}
+
+.buildings-surprise{
+  opacity: 1;
+  transform: translate(750vh, -404vh);
+}
+
+/* All portals */
+.portal{
+  width: 10em;
+  height: 20vh;
+  transform: translateY(72vh);
+  background: url("./assets/portal/portal_00.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#in-1{
+  transform: translate(1200vh, -438vh);
+}
+
+
+#out-1{
+  transform: translate(140vh, 65vh);
+}
+
+#in-2{
+  transform: translate(1500vh, -370vh);
+}
+
+#out-2{
+  transform: translate(175vh, 65vh);
+}
+
+#in-3{
+  transform: translate(1750vh, -795vh);
+}
+
+#out-3{
+  transform: translate(100vh, 65vh);
+}
+
+/* Black background for portal */
+.black-overlay {
+  left: 0;
+  top: 0;
+  background: black;
+  z-index: 100;
+  position: sticky;
+  width: 200vh;
+  height: 200vw;
+  opacity: 0;
+}
+
+/* Stats 1 slide 2 */
+.stats2{
+  width: 90%;
+  height: 70vh;
+  background: url("./assets/languages.png");
+  transform: translate(480vh, -113vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bird1{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, 10vh);
+  transition: transform 3s;
+}
+
+.bird1-surprise{
+  transform: translate(40vh, 10vh);
+}
+
+.bird2{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -2vh);
+  transition: transform 3s;
+}
+
+.bird2-surprise{
+  transform: translate(62vh, -2vh);
+}
+
+
+.bird3{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -14.5vh);
+  transition: transform 3s;
+}
+
+
+.bird3-surprise{
+  transform: translate(89vh, -13.5vh);
+}
+
+.bird4{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -11vh);
+  transition: transform 3s;
+}
+
+.bird4-surprise{
+  transform: translate(40vh, -11vh);
+}
+
+
+.bird5{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -23vh);
+  transition: transform 3s;
+}
+
+.bird5-surprise{
+  transform: translate(62.5vh, -23vh);
+}
+
+
+.bird6{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -20vh);
+  transition: transform 3s;
+}
+
+.bird6-surprise{
+  transform: translate(40vh, -20vh);
+}
+
+
+.bird7{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -32vh);
+  transition: transform 3s;
+}
+
+.bird7-surprise{
+  transform:translate(63vh, -32vh);
+}
+
+
+.bird8{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -44vh);
+  transition: transform 3s;
+}
+
+.bird8-surprise{
+  transform:translate(89.5vh, -44vh);
+}
+
+
+.bird9{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -40vh);
+  transition: transform 3s;
+}
+
+.bird9-surprise{
+  transform: translate(40vh, -40vh);
+}
+
+
+.bird10{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -52vh);
+  transition: transform 3s;
+}
+
+
+.bird10-surprise{
+  transform:translate(63vh, -52vh);
+}
+
+.stats3{
+  width: 90%;
+  height: 70vh;
+  background: url("./assets/web.png");
+  transform: translate(800vh, -225vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bird11{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, 10vh);
+  transition: transform 3s;
+}
+
+
+.bird11-surprise{
+  transform: translate(39vh, 10vh);
+}
+
+.bird12{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -2vh);
+  transition: transform 3s;
+}
+
+.bird12-surprise{
+  transform: translate(61vh, -2vh);
+}
+
+
+.bird13{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, 0vh);
+  transition: transform 3s;
+}
+
+
+.bird13-surprise{
+  transform: translate(39vh, 0vh);
+}
+
+.bird14{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -11vh);
+  transition: transform 3s;
+}
+
+.bird14-surprise{
+  transform: translate(61vh, -11vh);
+}
+
+
+.bird15{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -23vh);
+  transition: transform 3s;
+}
+
+.bird15-surprise{
+  transform: translate(90vh, -23vh);
+}
+
+
+.bird16{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -20vh);
+  transition: transform 3s;
+}
+
+.bird16-surprise{
+  transform: translate(39vh, -20vh);
+}
+
+
+.bird17{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -32vh);
+  transition: transform 3s;
+}
+
+.bird17-surprise{
+  transform:translate(61vh, -32vh);
+}
+
+
+.bird18{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(150vh, -28vh);
+  transition: transform 3s;
+}
+
+.bird18-surprise{
+  transform:translate(39vh, -28vh);
+}
+
+.window1{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/databasewindow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(635vh, 110vh);
+  transition: transform 3s;
+}
+
+.window1-surprise{
+  transform:translate(635vh, -110vh);
+}
+
+.window1sample{
+  width: 30%;
+  height: 50vh;
+  background: url("./assets/databasesamplewindow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(735vh, 160vh);
+  transition: transform 3s;
+}
+
+.window1sample-surprise{
+  transform:translate(735vh, -160vh);
+}
+
+.window2{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/Gamewindow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(890vh, 250vh);
+  transition: transform 3s;
+}
+
+.window2-surprise{
+  transform:translate(890vh, -250vh);
+}
+
+.window2poster{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/Gamewindowsample.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(990vh, 310vh);
+  transition: transform 3s;
+}
+
+.window2poster-surprise{
+  transform:translate(990vh, -310vh);
+}
+
+.window2sample{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/windowlandscape.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1031vh, 370vh);
+  transition: transform 3s;
+}
+
+.window2sample-surprise{
+  transform:translate(1031vh, -370vh);
+}
+
+.video{
+  width: 100vh;
+  height: 45vh;
+  transform:translate(2vh, 14vh);
+}
+
+.other1{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/tictactoe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1261vh, 460vh);
+  transition: transform 3s;
+}
+
+.other1-surprise{
+  transform:translate(1261vh, -460vh);
+}
+
+.other12{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/tictactoe1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1301vh, 520vh);
+  transition: transform 3s;
+}
+
+.other12-surprise{
+  transform:translate(1301vh, -520vh);
+}
+
+.other2{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/snake\ game\ pic.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1351vh, 581vh);
+  transition: transform 3s;
+}
+
+.other2-surprise{
+  transform:translate(1351vh, -581vh);
+}
+
+.other3{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/Ian.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1471vh, 281vh);
+  transition: transform 3s;
+}
+
+.other3-surprise{
+  transform:translate(1471vh, -681vh);
+}
+
+
+.other4{
+  width: 30%;
+  height: 60vh;
+  background: url("./assets/Welcome\ Banner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1551vh, -261vh);
+  transition: transform 3s;
+}
+
+.other4-surprise{
+  transform:translate(1551vh, -761vh);
+}
+
+
+.label1{
+  width: 30%;
+  height: 20vh;
+  background: url("./assets/tictactoename.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1279vh, -590vh);
+}
+
+.label2{
+  width: 30%;
+  height: 20vh;
+  background: url("./assets/snakename.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1381vh, -610vh);
+}
+
+.label3{
+  width: 30%;
+  height: 20vh;
+  background: url("./assets/ianbanner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1477vh, -690vh);
+}
+
+
+.label4{
+  width: 30%;
+  height: 20vh;
+  background: url("./assets/welcomebanner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1581vh, -770vh);
+}
+
+
+.pennant1{
+  width: 30%;
+  height: 50vh;
+  background: url("./assets/award1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(480vh, -399vh);
+  transition: transform 3s;
+}
+
+.pennant1-surprise{
+  transform:translate(480vh, -99vh);
+}
+
+.pennant2{
+  width: 30%;
+  height: 50vh;
+  background: url("./assets/award2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(589vh, -399vh);
+  transition: transform 3s;
+}
+
+.pennant2-surprise{
+  transform:translate(589vh, -149vh);
+}
+
+.pennant3{
+  width: 30%;
+  height: 50vh;
+  background: url("./assets/award3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(699vh, -399vh);
+  transition: transform 3s;
+}
+
+.pennant3-surprise{
+  transform:translate(699vh, -199vh);
+}
+
+.pennant4{
+  width: 30%;
+  height: 50vh;
+  background: url("./assets/award4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(810vh, -399vh);
+  transition: transform 3s;
+}
+
+.pennant4-surprise{
+  transform:translate(810vh, -249vh);
+}
+
+.trophy1{
+  width: 30%;
+  height: 40vh;
+  background: url("./assets/trophy1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(495vh, 253vh);
+  transition: transform 3s;
+}
+
+.trophy1-surprise{
+  transform:translate(495vh, -253vh);
+}
+
+.trophy2{
+  width: 30%;
+  height: 35vh;
+  background: url("./assets/trophy2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(600vh, 288vh);
+  transition: transform 3s;
+}
+
+.trophy2-surprise{
+  transform:translate(600vh, -288vh);
+}
+
+.trophy3{
+  width: 30%;
+  height: 40vh;
+  background: url("./assets/trophy3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(710vh, 328vh);
+  transition: transform 3s;
+}
+
+.trophy3-surprise{
+  transform:translate(710vh, -328vh);
+}
+
+.trophy4{
+  width: 30%;
+  height: 40vh;
+  background: url("./assets/trophy4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(823vh, 368vh);
+  transition: transform 3s;
+}
+
+.trophy4-surprise{
+  transform:translate(823vh, -368vh);
+}
+
+.confetti{
+  opacity: 0;
+  width: 30%;
+  height: 70vh;
+  background: url("./assets/confetti.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(1088vh, -508vh);
+  transition: opacity 1s, transform 5s;
+}
+
+.confetti-surprise{
+  opacity: 1;
+  transform: translate(1088vh, -308vh);
+}
+
+
+.stats4{
+  width: 90%;
+  height: 70vh;
+  background: url("./assets/adobe.png");
+  transform: translate(1110vh, -337vh);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bird19{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, 10vh);
+  transition: transform 3s; 
+}
+
+.bird19-surprise{
+  transform: translate(39vh, 10vh);
+}
+
+.bird20{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, -2vh);
+  transition: transform 3s; 
+}
+
+.bird20-surprise{
+  transform: translate(62vh, -2vh);
+}
+
+
+.bird21{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, 0vh);
+  transition: transform 3s; 
+}
+
+.bird21-surprise{
+  transform: translate(39vh, 0vh);
+}
+
+.bird22{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, -12vh);
+  transition: transform 3s; 
+}
+
+.bird22-surprise{
+  transform: translate(62vh, -12vh);
+}
+
+.bird23{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, -8vh);
+  transition: transform 3s; 
+}
+
+.bird23-surprise{
+  transform: translate(39vh, -8vh);
+}
+
+.bird24{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, -20vh);
+  transition: transform 3s; 
+}
+
+.bird24-surprise{
+  transform: translate(62vh, -20vh);
+}
+
+.bird25{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, -32vh);
+  transition: transform 3s; 
+}
+
+.bird25-surprise{
+  transform: translate(91vh, -32vh);
+}
+
+.bird26{
+  width: 30%;
+  height: 12vh;
+  background: url("./assets/Bird3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(200vh, -44vh);
+  transition: transform 3s; 
+}
+
+.bird26-surprise{
+  transform: translate(118vh, -44vh);
+}
